@@ -157,6 +157,6 @@ This project combines my engineering background with my growing experience in Da
 
 ---
 
-**Author:** Lilian Karely Martínez Magaña  
+**Author:** Lilian Karely Martínez  
 **Project:** NASA Exoplanets Analytics  
 **Date:** November 2026
