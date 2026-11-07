@@ -144,7 +144,8 @@ exoplanetary-systems-analytics/
 │   └── processed/
 │
 ├── notebooks/
-│   └── 01_exoplanetary_systems_analytics.ipynb
+│   └── exoplanetary_systems_analytics.ipynb
+│   └── exoplanetary_systems_ml.ipynb
 │
 └── outputs/
     ├── figures/
