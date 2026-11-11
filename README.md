@@ -100,17 +100,51 @@ Planetary properties show wide ranges and asymmetric distributions. Extreme obse
 
 ## 🤖 Machine Learning — Random Forest Regressor
 
-A Random Forest regression model was implemented to predict **planetary equilibrium temperature (`pl_eqt`)**.
+A Random Forest regression model was developed to predict **planetary equilibrium temperature (`pl_eqt`)** based on selected planetary and stellar characteristics.
+
+### Data Preparation
+
+| Stage | Records |
+|---|---:|
+| Initial dataset | 5,044 |
+| Records after removing missing values (NaN) | 766 |
+| Retained data | 15.2% |
+
+Complete-case filtering was applied, removing records with missing values in the selected model variables.
+
+### Model Configuration
+
+- **Algorithm:** Random Forest Regressor.
+- **Target variable:** Planetary equilibrium temperature (`pl_eqt`).
+- **Data split:** 80% training / 20% testing.
+- **Training records:** 612.
+- **Testing records:** 154.
+
+### Model Performance
 
 | Evaluation metric | Result |
 |---|---:|
-| Records after removing missing values | 766 |
-| R² | 0.934 |
+| R² (Coefficient of Determination) | 0.934 |
 | Mean Squared Error (MSE) | 21,539.515 |
+| Root Mean Squared Error (RMSE) | 146.76 K |
 
-The preliminary model results indicate a strong fit within the evaluated sample. Predictions showed smaller deviations for several medium and high temperature observations, while some colder planets presented larger errors.
+### Preliminary Results
 
-*Model performance should be interpreted in the context of the validation strategy, sample size, and potential observational biases.*
+The model achieved an R² of 0.934, indicating that it explained approximately 93.4% of the variance in equilibrium temperature within the test sample.
+
+The RMSE of approximately 146.76 K represents the typical magnitude of prediction errors, expressed in Kelvin.
+
+Predictions showed smaller deviations for several medium and high-temperature observations, while some colder planets presented larger errors.
+
+### Limitations and Considerations
+
+- Only 15.2% of the initial dataset remained after removing records with missing values.
+- The reduced sample size may limit the model's representativeness of the overall exoplanet population.
+- The model's performance depends on the selected features and their completeness.
+- Random Forest captures nonlinear relationships but does not establish physical causality.
+- Further validation, feature importance analysis, and cross-validation are recommended to assess model robustness.
+
+*The reported metrics correspond to the evaluated test sample and should not be interpreted as evidence of generalization to all known exoplanets. Model performance should be interpreted in the context of the validation strategy, sample size, and potential observational biases. *
 
 ## 🛠️ Technologies & Libraries
 
