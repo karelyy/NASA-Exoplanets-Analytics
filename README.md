@@ -184,6 +184,7 @@ exoplanetary-systems-analytics/
 └── outputs/
     ├── figures/
     └── interactive/
+    └── reports/
 ```
 
 ## 🚀 Project Purpose
